@@ -12,13 +12,13 @@ public:
 
 	virtual bool OnUserCreate()
 	{
-
+		imageValues = imageManager();
 		return true;
 	}
 
 	bool OnUserUpdate(float fElapsedTime)
 	{
-		imageValues = imageManager();
+		//imageValues = imageManager();
 		int posY = 0;
 		int posX = 0;
 
