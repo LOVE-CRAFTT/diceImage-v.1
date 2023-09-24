@@ -1,5 +1,5 @@
 # DiceImage
-Represent image using dice
+Represent any image using dice
 
 ## Requirements
 Requires libpng library
