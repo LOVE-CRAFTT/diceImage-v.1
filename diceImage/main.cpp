@@ -42,7 +42,7 @@ public:
 	{
 		dotNum = std::clamp(dotNum, 1, 6);
 
-		//General algorithm: FillDots fills a white circle at the start of the rectangles edge plus an offset
+		//General algorithm: The FillDots function fills in a white circle at the start of the rectangles edge plus an offset
 
 		if (dotNum == 1)
 		{
@@ -145,7 +145,11 @@ int main()
 		diceImage.ConstructConsole(190, 100, 8, 8);
 		diceImage.Start();
 	}
-	
+
+	//Character size could be smaller so result could be more detailed
+	//Make size of result more dynamic
+	//Make a UI of sort
+	//Return a sequence of numbers/Images for easily actually building it 
 
 	return 0;
 }
