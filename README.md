@@ -21,6 +21,7 @@ Original          |  Result
 - Figure out why it doesn't work with Windows terminal app
 - Make image input UI to make it easier to work with
 - Make system to enable actually building the image e.g. statistics on number of each dice necessary.
+- Updates in V.2
 
 
 ## Requirements
