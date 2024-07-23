@@ -9,7 +9,7 @@ std::vector<int> imageManager()
 {
 
 	GrayscaleImage Input;
-	Input.Load("ImagesResized(180 x 90)/McrftFace.png");
+	Input.Load("ImagesResized 180x90/McrftFace.png");
 	/*fprintf(stderr, "width: %d", Input.GetWidth());
 	fprintf(stderr, "height: %d", Input.GetHeight());*/
 	std::vector <int> avgSegment;
