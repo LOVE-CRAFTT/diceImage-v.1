@@ -1,5 +1,5 @@
 # DiceImage
-Attempt at creating system for representing any image using dice with impressively shitty results.
+Attempt at creating system for representing any image using dice.
 
 Using shortened image.h library from school professor and olcConsoleGameEngine from javidx9 https://github.com/OneLoneCoder
 
