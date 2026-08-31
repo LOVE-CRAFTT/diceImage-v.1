@@ -1,14 +1,16 @@
-#include "olcConsoleGameEngine.h"
-#include "imageManager.h"
-#include <algorithm>
+#define OLC_PGE_APPLICATION
 
-#define _CRT_SECURE_NO_WARNINGS
+#include "include/olcPixelGameEngine.h"
+#include "include/imageManager.h"
 
 
-class diceImage : public olcConsoleGameEngine
+class DiceImage : public olc::PixelGameEngine
 {
 public:
-	diceImage() {};
+	DiceImage() 
+	{
+		sAppName = "DiceImage";
+	};
 
 	virtual bool OnUserCreate()
 	{
@@ -22,9 +24,9 @@ public:
 		int posY = 0;
 		int posX = 0;
 
-		for (int startY = 5; startY < (m_nScreenHeight - 5); startY += 10)
+		for (int startY = 5; startY < (ScreenHeight() - 5); startY += 10)
 		{
-			for (int startX = 5; startX < (m_nScreenWidth - 5); startX += 10)
+			for (int startX = 5; startX < (ScreenWidth() - 5); startX += 10)
 			{
 				int dotNum = imageValues[posY * 18 + posX];
 				DrawDie(dotNum, startX, startY, (startX + 10), (startY + 10));
@@ -125,7 +127,8 @@ public:
 		short xSegment = (xDiff + 0.5) / 3;
 		short ySegment = (yDiff + 0.5) / 3;
 		DrawRect(x1, y1, x2, y2);
-		Fill(x1, y1, x2, y2, 0x2588, 0x000C);
+		// FillRect(x1, y1, x2, y2, 0x2588, 0x000C);
+		FillRect(x1, y1, x1 + x2, y1 + y2, olc::RED);
 		FillDots(dotNum, xSegment, ySegment, x1, y1);
 	}
 
@@ -141,8 +144,8 @@ int main()
 
 	if (1)
 	{
-		diceImage diceImage;
-		diceImage.ConstructConsole(190, 100, 8, 8);
+		DiceImage diceImage;
+		diceImage.Construct(190, 100, 8, 8);
 		diceImage.Start();
 	}
 
